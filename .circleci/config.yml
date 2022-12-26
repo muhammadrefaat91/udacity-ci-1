@@ -26,9 +26,8 @@ jobs:
           name: Install Ansible
           command: |
             # Install Ansible
-            apt install ansible -y
-            apk add --update ansible
-            which ansible
+            apk add --update tar gzip ansible
+            pip install awscli
       - run:
           name: Run Playbook and Configure server
           command: |
