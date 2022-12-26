@@ -20,8 +20,8 @@ jobs:
     steps:
       - checkout
       - add_ssh_keys:
-              # You can get this ID in the section where you registered the SSH Key
-              fingerprints: ["e1:67:62:6f:8b:a8:c7:a5:05:c4:3b:01:5c:de:6a:80"] 
+          fingerprints: 
+            - "e1:67:62:6f:8b:a8:c7:a5:05:c4:3b:01:5c:de:6a:80"
       - run:
           name: Install Ansible
           command: |
@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            ansible-playbook -i inventory.txt main.yml 
+            ansible-playbook -i inventory.txt main.yml
   build:
     docker:
       - image: circleci/node:13.8.0
