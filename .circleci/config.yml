@@ -30,10 +30,10 @@ jobs:
       - run:
           name: Run Playbook and Configure server
           command: |
-            cat ./.circleci/inventory.txt
+            cat ../inventory.txt
             export ANSIBLE_HOST_KEY_CHECKING=False
             export RECORD_HOST_KEYS=True
-            ansible-playbook -i ./.circleci/inventory.txt main.yml
+            ansible-playbook -i ../inventory.txt ../main.yml
   build:
     docker:
       - image: circleci/node:13.8.0
