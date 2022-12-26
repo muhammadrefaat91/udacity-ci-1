@@ -30,8 +30,6 @@ jobs:
           name: Run Playbook and Configure server
           command: |
             cat  inventory.txt
-            export ANSIBLE_HOST_KEY_CHECKING=False
-            export RECORD_HOST_KEYS=True
             ansible-playbook -i  inventory.txt  main.yml
   # build:
   #   docker:
