@@ -1,0 +1,5 @@
+[all]
+ec2-44-203-91-233.compute-1.amazonaws.com
+
+[ubuntu]
+ec2-44-203-91-233.compute-1.amazonaws.com
